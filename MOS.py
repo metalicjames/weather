@@ -1,8 +1,6 @@
 import datetime
 import forecast
 import util
-import urllib
-import os
 
 class MOSDataset:
 
