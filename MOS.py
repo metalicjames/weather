@@ -57,7 +57,16 @@ class MOSDataset:
                 
                 fcPrecip = 0
                 if fields[12] != '':
-                    fcPrecip = float(fields[12])
+                    if fields[12] == '1':
+                        fcPrecip = 0.05
+                    elif fields[12] == '2':
+                        fcPrecip = 0.17
+                    elif fields[12] == '3':
+                        fcPrecip = 0.37
+                    elif fields[12] == '4':
+                        fcPrecip = 0.75
+                    elif fields[12] == '5':
+                        fcPrecip = 1
 
                 y += 1
                 if y > offset + 8:
